@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Location.create(title: "Kobi's Gaff", address: "Flat 11, 6 Copper Place", latitude: 53.446358, longitude:  -2.237885)

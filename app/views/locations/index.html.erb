@@ -1,0 +1,43 @@
+
+
+
+	<section id="info">
+
+			<header>
+		 		<h1><a href="#">Geoplanner</a></h1>
+				<h2>The best places in the world!</h2>
+		  	</header>
+
+	<form action="/" method="get">
+		<input type="text" name="location">
+	</form>      		
+
+
+		<ul>
+
+		      		<% @locations.each do |location| %>
+
+		<li data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
+			<h3><%= location.title%></h3>
+			<p><%= location.address %></p>
+
+		
+
+			<%if params[:location].present? %>
+				<p> <%= location.distance_to(params[:location]).round(1)%> km away</p>
+
+			<% end %>
+
+		</li>	
+
+
+
+	<% end %>
+		  </ul>
+
+
+		</section>
+
+		<section id="map"></section>
+
+<%= link_to "Add a location", new_location_path, class:"button" %>

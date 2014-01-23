@@ -1,0 +1,18 @@
+<h1> 
+Add a new location NOW!
+
+</h1>
+
+<!-- this will be added in with simple form -->
+
+<%= simple_form_for @location do |form| %>
+	<%= form.input :title  %>
+	<%= form.input :address  %>
+	
+
+	<%= form.button :submit  %>
+
+
+<% end %>
+
+
